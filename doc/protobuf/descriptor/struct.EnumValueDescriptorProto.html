@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The protobuf library documentation.">
+
+    <title>protobuf::descriptor::EnumValueDescriptorProto - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>protobuf</a>&#8203;::<a href='index.html'>descriptor</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.DescriptorProto.html'>DescriptorProto</a><a class='struct ' href='struct.DescriptorProto_ExtensionRange.html'>DescriptorProto_ExtensionRange</a><a class='struct ' href='struct.EnumDescriptorProto.html'>EnumDescriptorProto</a><a class='struct ' href='struct.EnumOptions.html'>EnumOptions</a><a class='struct current' href='struct.EnumValueDescriptorProto.html'>EnumValueDescriptorProto</a><a class='struct ' href='struct.EnumValueOptions.html'>EnumValueOptions</a><a class='struct ' href='struct.FieldDescriptorProto.html'>FieldDescriptorProto</a><a class='struct ' href='struct.FieldOptions.html'>FieldOptions</a><a class='struct ' href='struct.FileDescriptorProto.html'>FileDescriptorProto</a><a class='struct ' href='struct.FileDescriptorSet.html'>FileDescriptorSet</a><a class='struct ' href='struct.FileOptions.html'>FileOptions</a><a class='struct ' href='struct.MessageOptions.html'>MessageOptions</a><a class='struct ' href='struct.MethodDescriptorProto.html'>MethodDescriptorProto</a><a class='struct ' href='struct.MethodOptions.html'>MethodOptions</a><a class='struct ' href='struct.ServiceDescriptorProto.html'>ServiceDescriptorProto</a><a class='struct ' href='struct.ServiceOptions.html'>ServiceOptions</a><a class='struct ' href='struct.SourceCodeInfo.html'>SourceCodeInfo</a><a class='struct ' href='struct.SourceCodeInfo_Location.html'>SourceCodeInfo_Location</a><a class='struct ' href='struct.UninterpretedOption.html'>UninterpretedOption</a><a class='struct ' href='struct.UninterpretedOption_NamePart.html'>UninterpretedOption_NamePart</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.file_descriptor_proto.html'>file_descriptor_proto</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'>Struct <a href='../index.html'>protobuf</a>::<a href='index.html'>descriptor</a>::<a class='struct' href=''>EnumValueDescriptorProto</a><a class='source' id='src-27615' href='../../src/protobuf/descriptor.rs.html#3048-3053'>[src]</a></h1>
+<pre class='rust struct'>pub struct EnumValueDescriptorProto {
+    // some fields omitted
+}</pre><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl&lt;'a&gt; <a class='struct' href='../../protobuf/descriptor/struct.EnumValueDescriptorProto.html' title='protobuf::descriptor::EnumValueDescriptorProto'>EnumValueDescriptorProto</a></code></h3><div class='methods'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>() -&gt; <a class='struct' href='../../protobuf/descriptor/struct.EnumValueDescriptorProto.html' title='protobuf::descriptor::EnumValueDescriptorProto'>EnumValueDescriptorProto</a></code></h4>
+<h4 id='method.default_instance' class='method'><code>fn <a href='#method.default_instance' class='fnname'>default_instance</a>() -&gt; &amp;'static <a class='struct' href='../../protobuf/descriptor/struct.EnumValueDescriptorProto.html' title='protobuf::descriptor::EnumValueDescriptorProto'>EnumValueDescriptorProto</a></code></h4>
+<h4 id='method.write_to_with_computed_sizes' class='method'><code>fn <a href='#method.write_to_with_computed_sizes' class='fnname'>write_to_with_computed_sizes</a>(&amp;self, os: &amp;mut <a class='struct' href='../../protobuf/struct.CodedOutputStream.html' title='protobuf::CodedOutputStream'>CodedOutputStream</a>, sizes: &amp;<a href='http://doc.rust-lang.org/std/primitive.slice.html'>[<a href='http://doc.rust-lang.org/std/primitive.u32.html'>u32</a>]</a>, sizes_pos: &amp;mut <a href='http://doc.rust-lang.org/std/primitive.uint.html'>uint</a>)</code></h4>
+<h4 id='method.clear_name' class='method'><code>fn <a href='#method.clear_name' class='fnname'>clear_name</a>(&amp;mut self)</code></h4>
+<h4 id='method.has_name' class='method'><code>fn <a href='#method.has_name' class='fnname'>has_name</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.set_name' class='method'><code>fn <a href='#method.set_name' class='fnname'>set_name</a>(&amp;mut self, v: <a class='struct' href='http://doc.rust-lang.org/collections/string/struct.String.html' title='collections::string::String'>String</a>)</code></h4>
+<h4 id='method.mut_name' class='method'><code>fn <a href='#method.mut_name' class='fnname'>mut_name</a>(&amp;'a mut self) -&gt; &amp;'a mut <a class='struct' href='http://doc.rust-lang.org/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h4>
+<h4 id='method.get_name' class='method'><code>fn <a href='#method.get_name' class='fnname'>get_name</a>(&amp;'a self) -&gt; &amp;'a <a href='http://doc.rust-lang.org/std/primitive.str.html'>str</a></code></h4>
+<h4 id='method.clear_number' class='method'><code>fn <a href='#method.clear_number' class='fnname'>clear_number</a>(&amp;mut self)</code></h4>
+<h4 id='method.has_number' class='method'><code>fn <a href='#method.has_number' class='fnname'>has_number</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.set_number' class='method'><code>fn <a href='#method.set_number' class='fnname'>set_number</a>(&amp;mut self, v: <a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a>)</code></h4>
+<h4 id='method.mut_number' class='method'><code>fn <a href='#method.mut_number' class='fnname'>mut_number</a>(&amp;'a mut self) -&gt; &amp;'a mut <a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_number' class='method'><code>fn <a href='#method.get_number' class='fnname'>get_number</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.clear_options' class='method'><code>fn <a href='#method.clear_options' class='fnname'>clear_options</a>(&amp;mut self)</code></h4>
+<h4 id='method.has_options' class='method'><code>fn <a href='#method.has_options' class='fnname'>has_options</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.set_options' class='method'><code>fn <a href='#method.set_options' class='fnname'>set_options</a>(&amp;mut self, v: <a class='struct' href='../../protobuf/descriptor/struct.EnumValueOptions.html' title='protobuf::descriptor::EnumValueOptions'>EnumValueOptions</a>)</code></h4>
+<h4 id='method.mut_options' class='method'><code>fn <a href='#method.mut_options' class='fnname'>mut_options</a>(&amp;'a mut self) -&gt; &amp;'a mut <a class='struct' href='../../protobuf/descriptor/struct.EnumValueOptions.html' title='protobuf::descriptor::EnumValueOptions'>EnumValueOptions</a></code></h4>
+<h4 id='method.get_options' class='method'><code>fn <a href='#method.get_options' class='fnname'>get_options</a>(&amp;'a self) -&gt; &amp;'a <a class='struct' href='../../protobuf/descriptor/struct.EnumValueOptions.html' title='protobuf::descriptor::EnumValueOptions'>EnumValueOptions</a></code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.EnumValueDescriptorProto.html' title='protobuf::descriptor::EnumValueDescriptorProto'>EnumValueDescriptorProto</a></code></h3><div class='methods'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>() -&gt; <a class='struct' href='../../protobuf/descriptor/struct.EnumValueDescriptorProto.html' title='protobuf::descriptor::EnumValueDescriptorProto'>EnumValueDescriptorProto</a></code></h4>
+<h4 id='method.is_initialized' class='method'><code>fn <a href='#method.is_initialized' class='fnname'>is_initialized</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.merge_from' class='method'><code>fn <a href='#method.merge_from' class='fnname'>merge_from</a>(&amp;mut self, is: &amp;mut <a class='struct' href='../../protobuf/struct.CodedInputStream.html' title='protobuf::CodedInputStream'>CodedInputStream</a>)</code></h4>
+<h4 id='method.compute_sizes' class='method'><code>fn <a href='#method.compute_sizes' class='fnname'>compute_sizes</a>(&amp;self, sizes: &amp;mut <a class='struct' href='http://doc.rust-lang.org/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.u32.html'>u32</a>&gt;) -&gt; <a href='http://doc.rust-lang.org/std/primitive.u32.html'>u32</a></code></h4>
+<h4 id='method.write_to' class='method'><code>fn <a href='#method.write_to' class='fnname'>write_to</a>(&amp;self, os: &amp;mut <a class='struct' href='../../protobuf/struct.CodedOutputStream.html' title='protobuf::CodedOutputStream'>CodedOutputStream</a>)</code></h4>
+<h4 id='method.get_unknown_fields' class='method'><code>fn <a href='#method.get_unknown_fields' class='fnname'>get_unknown_fields</a>&lt;'s&gt;(&amp;'s self) -&gt; &amp;'s <a class='struct' href='../../protobuf/struct.UnknownFields.html' title='protobuf::UnknownFields'>UnknownFields</a></code></h4>
+<h4 id='method.mut_unknown_fields' class='method'><code>fn <a href='#method.mut_unknown_fields' class='fnname'>mut_unknown_fields</a>&lt;'s&gt;(&amp;'s mut self) -&gt; &amp;'s mut <a class='struct' href='../../protobuf/struct.UnknownFields.html' title='protobuf::UnknownFields'>UnknownFields</a></code></h4>
+<h4 id='method.descriptor_static' class='method'><code>fn <a href='#method.descriptor_static' class='fnname'>descriptor_static</a>(_: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../protobuf/descriptor/struct.EnumValueDescriptorProto.html' title='protobuf::descriptor::EnumValueDescriptorProto'>EnumValueDescriptorProto</a>&gt;) -&gt; &amp;'static <a class='struct' href='../../protobuf/reflect/struct.MessageDescriptor.html' title='protobuf::reflect::MessageDescriptor'>MessageDescriptor</a></code></h4>
+<h4 id='method.type_id' class='method'><code>fn <a href='#method.type_id' class='fnname'>type_id</a>(&amp;self) -&gt; <a class='struct' href='http://doc.rust-lang.org/core/intrinsics/struct.TypeId.html' title='core::intrinsics::TypeId'>TypeId</a></code></h4>
+<h4 id='method.serialized_size' class='method'><code>fn <a href='#method.serialized_size' class='fnname'>serialized_size</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/std/primitive.u32.html'>u32</a></code></h4>
+<h4 id='method.check_initialized' class='method'><code>fn <a href='#method.check_initialized' class='fnname'>check_initialized</a>(&amp;self)</code></h4>
+<h4 id='method.write_to_writer' class='method'><code>fn <a href='#method.write_to_writer' class='fnname'>write_to_writer</a>(&amp;self, w: &amp;mut <a class='trait' href='http://doc.rust-lang.org/std/io/trait.Writer.html' title='std::io::Writer'>Writer</a>)</code></h4>
+<h4 id='method.write_to_bytes' class='method'><code>fn <a href='#method.write_to_bytes' class='fnname'>write_to_bytes</a>(&amp;self) -&gt; <a class='struct' href='http://doc.rust-lang.org/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.u8.html'>u8</a>&gt;</code></h4>
+<h4 id='method.write_length_delimited_to' class='method'><code>fn <a href='#method.write_length_delimited_to' class='fnname'>write_length_delimited_to</a>(&amp;self, os: &amp;mut <a class='struct' href='../../protobuf/struct.CodedOutputStream.html' title='protobuf::CodedOutputStream'>CodedOutputStream</a>)</code></h4>
+<h4 id='method.write_length_delimited_to_writer' class='method'><code>fn <a href='#method.write_length_delimited_to_writer' class='fnname'>write_length_delimited_to_writer</a>(&amp;self, w: &amp;mut <a class='trait' href='http://doc.rust-lang.org/std/io/trait.Writer.html' title='std::io::Writer'>Writer</a>)</code></h4>
+<h4 id='method.write_length_delimited_to_bytes' class='method'><code>fn <a href='#method.write_length_delimited_to_bytes' class='fnname'>write_length_delimited_to_bytes</a>(&amp;self) -&gt; <a class='struct' href='http://doc.rust-lang.org/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.u8.html'>u8</a>&gt;</code></h4>
+<h4 id='method.descriptor' class='method'><code>fn <a href='#method.descriptor' class='fnname'>descriptor</a>(&amp;self) -&gt; &amp;'static <a class='struct' href='../../protobuf/reflect/struct.MessageDescriptor.html' title='protobuf::reflect::MessageDescriptor'>MessageDescriptor</a></code></h4>
+<h4 id='method.fmt_impl' class='method'><code>fn <a href='#method.fmt_impl' class='fnname'>fmt_impl</a>(&amp;self, f: &amp;mut <a class='struct' href='http://doc.rust-lang.org/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='../../protobuf/clear/trait.Clear.html' title='protobuf::clear::Clear'>Clear</a> for <a class='struct' href='../../protobuf/descriptor/struct.EnumValueDescriptorProto.html' title='protobuf::descriptor::EnumValueDescriptorProto'>EnumValueDescriptorProto</a></code></h3><div class='methods'><h4 id='method.clear' class='method'><code>fn <a href='#method.clear' class='fnname'>clear</a>(&amp;mut self)</code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/fmt/trait.Show.html' title='core::fmt::Show'>Show</a> for <a class='struct' href='../../protobuf/descriptor/struct.EnumValueDescriptorProto.html' title='protobuf::descriptor::EnumValueDescriptorProto'>EnumValueDescriptorProto</a></code></h3><div class='methods'><h4 id='method.fmt' class='method'><code>fn <a href='#method.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class='struct' href='http://doc.rust-lang.org/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../protobuf/descriptor/struct.EnumValueDescriptorProto.html' title='protobuf::descriptor::EnumValueDescriptorProto'>EnumValueDescriptorProto</a></code></h3><div class='methods'><h4 id='method.default' class='method'><code>fn <a href='#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../protobuf/descriptor/struct.EnumValueDescriptorProto.html' title='protobuf::descriptor::EnumValueDescriptorProto'>EnumValueDescriptorProto</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='struct' href='../../protobuf/descriptor/struct.EnumValueDescriptorProto.html' title='protobuf::descriptor::EnumValueDescriptorProto'>EnumValueDescriptorProto</a></code></h3><div class='methods'><h4 id='method.eq' class='method'><code>fn <a href='#method.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../../protobuf/descriptor/struct.EnumValueDescriptorProto.html' title='protobuf::descriptor::EnumValueDescriptorProto'>EnumValueDescriptorProto</a>) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><code>fn <a href='#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../../protobuf/descriptor/struct.EnumValueDescriptorProto.html' title='protobuf::descriptor::EnumValueDescriptorProto'>EnumValueDescriptorProto</a>) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../../protobuf/descriptor/struct.EnumValueDescriptorProto.html' title='protobuf::descriptor::EnumValueDescriptorProto'>EnumValueDescriptorProto</a></code></h3><div class='methods'><h4 id='method.clone' class='method'><code>fn <a href='#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../../protobuf/descriptor/struct.EnumValueDescriptorProto.html' title='protobuf::descriptor::EnumValueDescriptorProto'>EnumValueDescriptorProto</a></code></h4>
+<h4 id='method.clone_from' class='method'><code>fn <a href='#tymethod.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "protobuf";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

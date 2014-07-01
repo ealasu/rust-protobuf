@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The protobuf library documentation.">
+
+    <title>protobuf::protobuf::Message - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>protobuf</a>&#8203;::<a href='index.html'>protobuf</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='wire_format/index.html'>wire_format</a></div><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.CodedInputStream.html'>CodedInputStream</a><a class='struct ' href='struct.CodedOutputStream.html'>CodedOutputStream</a><a class='struct ' href='struct.UnknownFieldIter.html'>UnknownFieldIter</a><a class='struct ' href='struct.UnknownFields.html'>UnknownFields</a><a class='struct ' href='struct.UnknownValues.html'>UnknownValues</a><a class='struct ' href='struct.UnknownValuesIter.html'>UnknownValuesIter</a></div><div class='block trait'><h2>Traits</h2><a class='trait current' href='trait.Message.html'>Message</a><a class='trait ' href='trait.ProtobufEnum.html'>ProtobufEnum</a><a class='trait ' href='trait.WithCodedInputStream.html'>WithCodedInputStream</a><a class='trait ' href='trait.WithCodedOutputStream.html'>WithCodedOutputStream</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.message_down_cast.html'>message_down_cast</a><a class='fn ' href='fn.message_is.html'>message_is</a><a class='fn ' href='fn.parse_from.html'>parse_from</a><a class='fn ' href='fn.parse_from_bytes.html'>parse_from_bytes</a><a class='fn ' href='fn.parse_from_reader.html'>parse_from_reader</a><a class='fn ' href='fn.parse_length_delimited_from.html'>parse_length_delimited_from</a><a class='fn ' href='fn.parse_length_delimited_from_bytes.html'>parse_length_delimited_from_bytes</a><a class='fn ' href='fn.parse_length_delimited_from_reader.html'>parse_length_delimited_from_reader</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content trait">
+<h1 class='fqn'>Trait <a href='../index.html'>protobuf</a>::<a href='index.html'>protobuf</a>::<a class='trait' href=''>Message</a><a class='source' id='src-3907' href='../../src/protobuf/core.rs.html#743-813'>[src]</a></h1>
+<pre class='rust trait'>pub trait Message: <a class='trait' href='http://doc.rust-lang.org/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> + <a class='trait' href='http://doc.rust-lang.org/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> + <a class='trait' href='http://doc.rust-lang.org/core/default/trait.Default.html' title='core::default::Default'>Default</a> + <a class='trait' href='http://doc.rust-lang.org/core/fmt/trait.Show.html' title='core::fmt::Show'>Show</a> + <a class='trait' href='../../protobuf/clear/trait.Clear.html' title='protobuf::clear::Clear'>Clear</a> {
+    fn <a href='#tymethod.new' class='fnname'>new</a>() -&gt; Self;
+    fn <a href='#tymethod.is_initialized' class='fnname'>is_initialized</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a>;
+    fn <a href='#tymethod.merge_from' class='fnname'>merge_from</a>(&amp;mut self, is: &amp;mut <a class='struct' href='../../protobuf/struct.CodedInputStream.html' title='protobuf::CodedInputStream'>CodedInputStream</a>);
+    fn <a href='#tymethod.write_to' class='fnname'>write_to</a>(&amp;self, os: &amp;mut <a class='struct' href='../../protobuf/struct.CodedOutputStream.html' title='protobuf::CodedOutputStream'>CodedOutputStream</a>);
+    fn <a href='#tymethod.compute_sizes' class='fnname'>compute_sizes</a>(&amp;self, sizes: &amp;mut <a class='struct' href='http://doc.rust-lang.org/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.u32.html'>u32</a>&gt;) -&gt; <a href='http://doc.rust-lang.org/std/primitive.u32.html'>u32</a>;
+    fn <a href='#tymethod.get_unknown_fields' class='fnname'>get_unknown_fields</a>&lt;'s&gt;(&amp;'s self) -&gt; &amp;'s <a class='struct' href='../../protobuf/struct.UnknownFields.html' title='protobuf::UnknownFields'>UnknownFields</a>;
+    fn <a href='#tymethod.mut_unknown_fields' class='fnname'>mut_unknown_fields</a>&lt;'s&gt;(&amp;'s mut self) -&gt; &amp;'s mut <a class='struct' href='../../protobuf/struct.UnknownFields.html' title='protobuf::UnknownFields'>UnknownFields</a>;
+
+    fn <a href='#method.serialized_size' class='fnname'>serialized_size</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/std/primitive.u32.html'>u32</a> { ... }
+    fn <a href='#method.check_initialized' class='fnname'>check_initialized</a>(&amp;self) { ... }
+    fn <a href='#method.write_to_writer' class='fnname'>write_to_writer</a>(&amp;self, w: &amp;mut <a class='trait' href='http://doc.rust-lang.org/std/io/trait.Writer.html' title='std::io::Writer'>Writer</a>) { ... }
+    fn <a href='#method.write_to_bytes' class='fnname'>write_to_bytes</a>(&amp;self) -&gt; <a class='struct' href='http://doc.rust-lang.org/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.u8.html'>u8</a>&gt; { ... }
+    fn <a href='#method.write_length_delimited_to' class='fnname'>write_length_delimited_to</a>(&amp;self, os: &amp;mut <a class='struct' href='../../protobuf/struct.CodedOutputStream.html' title='protobuf::CodedOutputStream'>CodedOutputStream</a>) { ... }
+    fn <a href='#method.write_length_delimited_to_writer' class='fnname'>write_length_delimited_to_writer</a>(&amp;self, w: &amp;mut <a class='trait' href='http://doc.rust-lang.org/std/io/trait.Writer.html' title='std::io::Writer'>Writer</a>) { ... }
+    fn <a href='#method.write_length_delimited_to_bytes' class='fnname'>write_length_delimited_to_bytes</a>(&amp;self) -&gt; <a class='struct' href='http://doc.rust-lang.org/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.u8.html'>u8</a>&gt; { ... }
+    fn <a href='#method.descriptor' class='fnname'>descriptor</a>(&amp;self) -&gt; &amp;'static <a class='struct' href='../../protobuf/reflect/struct.MessageDescriptor.html' title='protobuf::reflect::MessageDescriptor'>MessageDescriptor</a> { ... }
+    fn <a href='#method.descriptor_static' class='fnname'>descriptor_static</a>(_: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;) -&gt; &amp;'static <a class='struct' href='../../protobuf/reflect/struct.MessageDescriptor.html' title='protobuf::reflect::MessageDescriptor'>MessageDescriptor</a> { ... }
+    fn <a href='#method.type_id' class='fnname'>type_id</a>(&amp;self) -&gt; <a class='struct' href='http://doc.rust-lang.org/core/intrinsics/struct.TypeId.html' title='core::intrinsics::TypeId'>TypeId</a> { ... }
+    fn <a href='#method.fmt_impl' class='fnname'>fmt_impl</a>(&amp;self, f: &amp;mut <a class='struct' href='http://doc.rust-lang.org/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a> { ... }
+}</pre>
+            <h2 id='required-methods'>Required Methods</h2>
+            <div class='methods'>
+        <h3 id='tymethod.new' class='method'><code>fn <a href='#tymethod.new' class='fnname'>new</a>() -&gt; Self</code></h3><h3 id='tymethod.is_initialized' class='method'><code>fn <a href='#tymethod.is_initialized' class='fnname'>is_initialized</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h3><h3 id='tymethod.merge_from' class='method'><code>fn <a href='#tymethod.merge_from' class='fnname'>merge_from</a>(&amp;mut self, is: &amp;mut <a class='struct' href='../../protobuf/struct.CodedInputStream.html' title='protobuf::CodedInputStream'>CodedInputStream</a>)</code></h3><h3 id='tymethod.write_to' class='method'><code>fn <a href='#tymethod.write_to' class='fnname'>write_to</a>(&amp;self, os: &amp;mut <a class='struct' href='../../protobuf/struct.CodedOutputStream.html' title='protobuf::CodedOutputStream'>CodedOutputStream</a>)</code></h3><h3 id='tymethod.compute_sizes' class='method'><code>fn <a href='#tymethod.compute_sizes' class='fnname'>compute_sizes</a>(&amp;self, sizes: &amp;mut <a class='struct' href='http://doc.rust-lang.org/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.u32.html'>u32</a>&gt;) -&gt; <a href='http://doc.rust-lang.org/std/primitive.u32.html'>u32</a></code></h3><h3 id='tymethod.get_unknown_fields' class='method'><code>fn <a href='#tymethod.get_unknown_fields' class='fnname'>get_unknown_fields</a>&lt;'s&gt;(&amp;'s self) -&gt; &amp;'s <a class='struct' href='../../protobuf/struct.UnknownFields.html' title='protobuf::UnknownFields'>UnknownFields</a></code></h3><h3 id='tymethod.mut_unknown_fields' class='method'><code>fn <a href='#tymethod.mut_unknown_fields' class='fnname'>mut_unknown_fields</a>&lt;'s&gt;(&amp;'s mut self) -&gt; &amp;'s mut <a class='struct' href='../../protobuf/struct.UnknownFields.html' title='protobuf::UnknownFields'>UnknownFields</a></code></h3></div>
+            <h2 id='provided-methods'>Provided Methods</h2>
+            <div class='methods'>
+        <h3 id='method.serialized_size' class='method'><code>fn <a href='#method.serialized_size' class='fnname'>serialized_size</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/std/primitive.u32.html'>u32</a></code></h3><h3 id='method.check_initialized' class='method'><code>fn <a href='#method.check_initialized' class='fnname'>check_initialized</a>(&amp;self)</code></h3><h3 id='method.write_to_writer' class='method'><code>fn <a href='#method.write_to_writer' class='fnname'>write_to_writer</a>(&amp;self, w: &amp;mut <a class='trait' href='http://doc.rust-lang.org/std/io/trait.Writer.html' title='std::io::Writer'>Writer</a>)</code></h3><h3 id='method.write_to_bytes' class='method'><code>fn <a href='#method.write_to_bytes' class='fnname'>write_to_bytes</a>(&amp;self) -&gt; <a class='struct' href='http://doc.rust-lang.org/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.u8.html'>u8</a>&gt;</code></h3><h3 id='method.write_length_delimited_to' class='method'><code>fn <a href='#method.write_length_delimited_to' class='fnname'>write_length_delimited_to</a>(&amp;self, os: &amp;mut <a class='struct' href='../../protobuf/struct.CodedOutputStream.html' title='protobuf::CodedOutputStream'>CodedOutputStream</a>)</code></h3><h3 id='method.write_length_delimited_to_writer' class='method'><code>fn <a href='#method.write_length_delimited_to_writer' class='fnname'>write_length_delimited_to_writer</a>(&amp;self, w: &amp;mut <a class='trait' href='http://doc.rust-lang.org/std/io/trait.Writer.html' title='std::io::Writer'>Writer</a>)</code></h3><h3 id='method.write_length_delimited_to_bytes' class='method'><code>fn <a href='#method.write_length_delimited_to_bytes' class='fnname'>write_length_delimited_to_bytes</a>(&amp;self) -&gt; <a class='struct' href='http://doc.rust-lang.org/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.u8.html'>u8</a>&gt;</code></h3><h3 id='method.descriptor' class='method'><code>fn <a href='#method.descriptor' class='fnname'>descriptor</a>(&amp;self) -&gt; &amp;'static <a class='struct' href='../../protobuf/reflect/struct.MessageDescriptor.html' title='protobuf::reflect::MessageDescriptor'>MessageDescriptor</a></code></h3><h3 id='method.descriptor_static' class='method'><code>fn <a href='#method.descriptor_static' class='fnname'>descriptor_static</a>(_: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;) -&gt; &amp;'static <a class='struct' href='../../protobuf/reflect/struct.MessageDescriptor.html' title='protobuf::reflect::MessageDescriptor'>MessageDescriptor</a></code></h3><h3 id='method.type_id' class='method'><code>fn <a href='#method.type_id' class='fnname'>type_id</a>(&amp;self) -&gt; <a class='struct' href='http://doc.rust-lang.org/core/intrinsics/struct.TypeId.html' title='core::intrinsics::TypeId'>TypeId</a></code></h3><h3 id='method.fmt_impl' class='method'><code>fn <a href='#method.fmt_impl' class='fnname'>fmt_impl</a>(&amp;self, f: &amp;mut <a class='struct' href='http://doc.rust-lang.org/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h3></div>
+        <h2 id='implementors'>Implementors</h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.FileDescriptorSet.html' title='protobuf::descriptor::FileDescriptorSet'>FileDescriptorSet</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.FileDescriptorProto.html' title='protobuf::descriptor::FileDescriptorProto'>FileDescriptorProto</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.DescriptorProto.html' title='protobuf::descriptor::DescriptorProto'>DescriptorProto</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.DescriptorProto_ExtensionRange.html' title='protobuf::descriptor::DescriptorProto_ExtensionRange'>DescriptorProto_ExtensionRange</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.FieldDescriptorProto.html' title='protobuf::descriptor::FieldDescriptorProto'>FieldDescriptorProto</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.EnumDescriptorProto.html' title='protobuf::descriptor::EnumDescriptorProto'>EnumDescriptorProto</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.EnumValueDescriptorProto.html' title='protobuf::descriptor::EnumValueDescriptorProto'>EnumValueDescriptorProto</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.ServiceDescriptorProto.html' title='protobuf::descriptor::ServiceDescriptorProto'>ServiceDescriptorProto</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.MethodDescriptorProto.html' title='protobuf::descriptor::MethodDescriptorProto'>MethodDescriptorProto</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.FileOptions.html' title='protobuf::descriptor::FileOptions'>FileOptions</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.MessageOptions.html' title='protobuf::descriptor::MessageOptions'>MessageOptions</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.FieldOptions.html' title='protobuf::descriptor::FieldOptions'>FieldOptions</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.EnumOptions.html' title='protobuf::descriptor::EnumOptions'>EnumOptions</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.EnumValueOptions.html' title='protobuf::descriptor::EnumValueOptions'>EnumValueOptions</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.ServiceOptions.html' title='protobuf::descriptor::ServiceOptions'>ServiceOptions</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.MethodOptions.html' title='protobuf::descriptor::MethodOptions'>MethodOptions</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.UninterpretedOption.html' title='protobuf::descriptor::UninterpretedOption'>UninterpretedOption</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.UninterpretedOption_NamePart.html' title='protobuf::descriptor::UninterpretedOption_NamePart'>UninterpretedOption_NamePart</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.SourceCodeInfo.html' title='protobuf::descriptor::SourceCodeInfo'>SourceCodeInfo</a></code></li>
+<li><code>impl <a class='trait' href='../../protobuf/protobuf/trait.Message.html' title='protobuf::protobuf::Message'>Message</a> for <a class='struct' href='../../protobuf/descriptor/struct.SourceCodeInfo_Location.html' title='protobuf::descriptor::SourceCodeInfo_Location'>SourceCodeInfo_Location</a></code></li>
+</ul><script type="text/javascript" async
+                              src="../../implementors/protobuf/protobuf/trait.Message.js">
+                      </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "protobuf";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

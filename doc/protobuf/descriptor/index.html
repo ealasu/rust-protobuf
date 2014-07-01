@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The protobuf library documentation.">
+
+    <title>protobuf::descriptor - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>protobuf</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='../clear/index.html'>clear</a><a class='mod ' href='../codegen/index.html'>codegen</a><a class='mod current' href='../descriptor/index.html'>descriptor</a><a class='mod ' href='../lazy/index.html'>lazy</a><a class='mod ' href='../protobuf/index.html'>protobuf</a><a class='mod ' href='../reflect/index.html'>reflect</a><a class='mod ' href='../repeated/index.html'>repeated</a><a class='mod ' href='../rt/index.html'>rt</a><a class='mod ' href='../singular/index.html'>singular</a><a class='mod ' href='../text_format/index.html'>text_format</a><a class='mod ' href='../wire_format/index.html'>wire_format</a></div><div class='block struct'><h2>Structs</h2><a class='struct ' href='../struct.CodedInputStream.html'>CodedInputStream</a><a class='struct ' href='../struct.CodedOutputStream.html'>CodedOutputStream</a><a class='struct ' href='../struct.UnknownFieldIter.html'>UnknownFieldIter</a><a class='struct ' href='../struct.UnknownFields.html'>UnknownFields</a><a class='struct ' href='../struct.UnknownValues.html'>UnknownValues</a><a class='struct ' href='../struct.UnknownValuesIter.html'>UnknownValuesIter</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='../trait.Message.html'>Message</a><a class='trait ' href='../trait.ProtobufEnum.html'>ProtobufEnum</a><a class='trait ' href='../trait.WithCodedInputStream.html'>WithCodedInputStream</a><a class='trait ' href='../trait.WithCodedOutputStream.html'>WithCodedOutputStream</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='../fn.message_down_cast.html'>message_down_cast</a><a class='fn ' href='../fn.message_is.html'>message_is</a><a class='fn ' href='../fn.parse_from.html'>parse_from</a><a class='fn ' href='../fn.parse_from_bytes.html'>parse_from_bytes</a><a class='fn ' href='../fn.parse_from_reader.html'>parse_from_reader</a><a class='fn ' href='../fn.parse_length_delimited_from.html'>parse_length_delimited_from</a><a class='fn ' href='../fn.parse_length_delimited_from_bytes.html'>parse_length_delimited_from_bytes</a><a class='fn ' href='../fn.parse_length_delimited_from_reader.html'>parse_length_delimited_from_reader</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'>Module <a href='../index.html'>protobuf</a>::<a class='mod' href=''>descriptor</a><a class='source' id='src-5402' href='../../src/protobuf/descriptor.rs.html#3-7799'>[src]</a></h1>
+<h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr>
+                        <td><a class='struct' href='struct.DescriptorProto.html'
+                               title='protobuf::descriptor::DescriptorProto'>DescriptorProto</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.DescriptorProto_ExtensionRange.html'
+                               title='protobuf::descriptor::DescriptorProto_ExtensionRange'>DescriptorProto_ExtensionRange</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.EnumDescriptorProto.html'
+                               title='protobuf::descriptor::EnumDescriptorProto'>EnumDescriptorProto</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.EnumOptions.html'
+                               title='protobuf::descriptor::EnumOptions'>EnumOptions</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.EnumValueDescriptorProto.html'
+                               title='protobuf::descriptor::EnumValueDescriptorProto'>EnumValueDescriptorProto</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.EnumValueOptions.html'
+                               title='protobuf::descriptor::EnumValueOptions'>EnumValueOptions</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.FieldDescriptorProto.html'
+                               title='protobuf::descriptor::FieldDescriptorProto'>FieldDescriptorProto</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.FieldOptions.html'
+                               title='protobuf::descriptor::FieldOptions'>FieldOptions</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.FileDescriptorProto.html'
+                               title='protobuf::descriptor::FileDescriptorProto'>FileDescriptorProto</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.FileDescriptorSet.html'
+                               title='protobuf::descriptor::FileDescriptorSet'>FileDescriptorSet</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.FileOptions.html'
+                               title='protobuf::descriptor::FileOptions'>FileOptions</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.MessageOptions.html'
+                               title='protobuf::descriptor::MessageOptions'>MessageOptions</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.MethodDescriptorProto.html'
+                               title='protobuf::descriptor::MethodDescriptorProto'>MethodDescriptorProto</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.MethodOptions.html'
+                               title='protobuf::descriptor::MethodOptions'>MethodOptions</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.ServiceDescriptorProto.html'
+                               title='protobuf::descriptor::ServiceDescriptorProto'>ServiceDescriptorProto</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.ServiceOptions.html'
+                               title='protobuf::descriptor::ServiceOptions'>ServiceOptions</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.SourceCodeInfo.html'
+                               title='protobuf::descriptor::SourceCodeInfo'>SourceCodeInfo</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.SourceCodeInfo_Location.html'
+                               title='protobuf::descriptor::SourceCodeInfo_Location'>SourceCodeInfo_Location</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.UninterpretedOption.html'
+                               title='protobuf::descriptor::UninterpretedOption'>UninterpretedOption</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.UninterpretedOption_NamePart.html'
+                               title='protobuf::descriptor::UninterpretedOption_NamePart'>UninterpretedOption_NamePart</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                    <tr>
+                        <td><a class='type' href='type.FieldDescriptorProto_Label.html'
+                               title='protobuf::descriptor::FieldDescriptorProto_Label'>FieldDescriptorProto_Label</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='type' href='type.FieldDescriptorProto_Type.html'
+                               title='protobuf::descriptor::FieldDescriptorProto_Type'>FieldDescriptorProto_Type</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='type' href='type.FieldOptions_CType.html'
+                               title='protobuf::descriptor::FieldOptions_CType'>FieldOptions_CType</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='type' href='type.FileOptions_OptimizeMode.html'
+                               title='protobuf::descriptor::FileOptions_OptimizeMode'>FileOptions_OptimizeMode</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='fn' href='fn.file_descriptor_proto.html'
+                               title='protobuf::descriptor::file_descriptor_proto'>file_descriptor_proto</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "protobuf";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>
